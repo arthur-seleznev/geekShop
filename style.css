@@ -759,10 +759,12 @@ blockquote {
 .item {
   position: relative;
   margin-bottom: 39px;
+  transition: transform 1s;
 }
 
 .item:hover {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  transform: scale(1.01);
 }
 
 .photo img {
@@ -1156,6 +1158,7 @@ select.display__prop__item {
 }
 
 .button__product__nav {
+  cursor: pointer;
   border-radius: 3px;
   width: 150px;
   height: 44px;
