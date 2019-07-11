@@ -5,30 +5,49 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<div id="app">
+    <cart-data ref="cartData"></cart-data>
     <header class="header">
         <div class="container header-flex">
             <div class="header__left">
-                <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span class="pink__letter">D</span></a>
+                <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
+                        class="pink__letter">D</span></a>
                 <form class="header__form" action="#">
-                    <a href="#" class="browse">Browse <i class="fas fa-caret-down fas-grey"></i></a>
+                    <div class="browse">Browse <i class="fas fa-caret-down fas-grey"></i>
+                        <div class="drop">
+                            <div class="drop__flex">
+                                <h3 class="drop__h3">Women</h3>
+                                <ul class="drop__menu">
+                                    <li><a class="drop__link" href="#">Dresses</a></li>
+                                    <li><a class="drop__link" href="#">Tops</a></li>
+                                    <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                                    <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <h3 class="drop__h3">Women</h3>
+                                <ul class="drop__menu">
+                                    <li><a class="drop__link" href="#">Dresses</a></li>
+                                    <li><a class="drop__link" href="#">Tops</a></li>
+                                    <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <input class="search_input" type="text" placeholder="Search for Item...">
                     <button class="search__button" type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-            <div class="header__right">
-                <img class="header__cart" src="img/cart.svg" alt="cart">
-                <a href="cart.html" class="button">My Account <i class="fas fa-caret-down"></i></a>
-            </div>
+            <mini-cart></mini-cart>
         </div>
     </header>
     <nav>
         <ul class="menu">
-            <li class="menu__list"><a href="index.html" class="menu__link">Home </a>
+            <li class="menu__list"><a href="index.html" class="menu__link active">Home </a>
                 <div class="drop">
                     <div class="drop__flex">
                         <h3 class="drop__h3">Women</h3>
@@ -249,106 +268,41 @@
         </div>
     </div>
     <div class="categories">
-        <div class="category__men">
+        <a href="product.html" class="category__men">
             <div class="category__caption">
                 <p class="caption_mini">HOT DEAL</p>
                 <p class="caption__big pink">FOR MEN</p>
             </div>
-        </div>
-        <div class="category__accesories">
+        </a>
+        <a href="product.html" class="category__accesories">
             <img class="image_accessory" src="img/accessory.jpg" alt="#">
             <div class="category__caption">
                 <p class="caption_mini">LUXIROUS &amp; TRENDY</p>
                 <p class="caption__big pink">ACCESORIES</p>
             </div>
 
-        </div>
-        <div class="category__women">
+        </a>
+        <a href="product.html" class="category__women">
             <div class="category__caption">
                 <p class="caption_mini">30% OFFER</p>
                 <p class="caption__big pink">WOMEN</p>
             </div>
-        </div>
-        <div class="category__kids">
+        </a>
+        <a href="product.html" class="category__kids">
             <div class="category__caption">
                 <p class="caption_mini">NEW ARRIVALS</p>
                 <p class="caption__big pink">FOR KIDS</p>
             </div>
-        </div>
+        </a>
     </div>
     <section class="items">
         <div class="items__header">
             <p class="items__header__first">Featured Items</p>
             <p class="items__header__second">Shop for items based on what we featured in this week</p>
         </div>
-        <div class="items__content">
-            <div class="item">
-                <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                <div class="info">
-                    <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                    <p class="item__price">$52.00</p>
-                </div>
-                <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-            </div>
-            <div class="item">
-                <div class="photo"><a href="single-page.html"><img src="img/2.jpg" alt=""></a></div>
-                <div class="info">
-                    <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                    <p class="item__price">$52.00</p>
-                </div>
-                <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-            </div>
-            <div class="item">
-                <div class="photo"><a href="single-page.html"><img src="img/3.jpg" alt=""></a></div>
-                <div class="info">
-                    <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                    <p class="item__price">$52.00</p>
-                </div>
-                <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-            </div>
-            <div class="item">
-                <div class="photo"><a href="single-page.html"><img src="img/4.jpg" alt=""></a></div>
-                <div class="info">
-                    <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                    <p class="item__price">$52.00</p>
-                </div>
-                <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-            </div>
-            <div class="item">
-                <div class="photo"><a href="single-page.html"><img src="img/5.jpg" alt=""></a></div>
-                <div class="info">
-                    <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                    <p class="item__price">$52.00</p>
-                </div>
-                <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-            </div>
-            <div class="item">
-                <div class="photo"><a href="single-page.html"><img src="img/6.jpg" alt=""></a></div>
-                <div class="info">
-                    <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                    <p class="item__price">$52.00</p>
-                </div>
-                <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-            </div>
-            <div class="item">
-                <div class="photo"><a href="single-page.html"><img src="img/7.jpg" alt=""></a></div>
-                <div class="info">
-                    <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                    <p class="item__price">$52.00</p>
-                </div>
-                <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-            </div>
-            <div class="item">
-                <div class="photo"><a href="single-page.html"><img src="img/8.jpg" alt=""></a></div>
-                <div class="info">
-                    <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                    <p class="item__price">$52.00</p>
-                </div>
-                <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-            </div>
-        </div>
+        <products :list_size="8"></products>
         <div class="items__browse">
-            <a href="#" class="button">Browse All Product &rarr;</a>
+            <a href="product.html" class="button">Browse All Product &rarr;</a>
         </div>
     </section>
     <div class="information">
@@ -363,17 +317,20 @@
             <article class="advantage">
                 <img class="advantage_icon" src="img/truck.svg" alt="">
                 <p class="advantage__header">Free Delivery</p>
-                <p class="avantage__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                <p class="avantage__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+                    with extensive models.</p>
             </article>
             <article class="advantage">
                 <img class="advantage_icon" src="img/discount.svg" alt="">
                 <p class="advantage__header">Free Delivery</p>
-                <p class="avantage__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                <p class="avantage__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+                    with extensive models.</p>
             </article>
             <article class="advantage">
                 <img class="advantage_icon" src="img/crown.svg" alt="">
                 <p class="advantage__header">Free Delivery</p>
-                <p class="avantage__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                <p class="avantage__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+                    with extensive models.</p>
             </article>
         </div>
     </div>
@@ -409,8 +366,11 @@
     </div>
     <footer class="footer_top">
         <div class="about-content">
-            <a class="logo" href="#"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span class="pink__letter">D</span></a>
-            <p class="about">Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships. </p>
+            <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
+                    class="pink__letter">D</span></a>
+            <p class="about">Objectively transition extensive data rather than cross functional solutions.
+                Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate
+                an expanded array of processes and cross-unit partnerships. </p>
             <p class="about">Efficiently plagiarize 24/365 action items and focused infomediaries.
                 Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
         </div>
@@ -458,7 +418,11 @@
             </div>
         </div>
     </footer>
-
+</div>
+<script src="js/vue.js"></script>
+<script src="js/productsComponent.js"></script>
+<script src="js/cartComponent.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

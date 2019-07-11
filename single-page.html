@@ -7,429 +7,371 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="sstyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<header class="header">
-    <div class="container header-flex">
-        <div class="header__left">
-            <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
-                    class="pink__letter">D</span></a>
-            <form class="header__form" action="#">
-                <a href="#" class="browse">Browse <i class="fas fa-caret-down fas-grey"></i></a>
-                <input class="search_input" type="text" placeholder="Search for Item...">
-                <button class="search__button" type="submit"><i class="fas fa-search"></i></button>
-            </form>
+<div id="app">
+    <cart-data ref="cartData"></cart-data>
+    <header class="header">
+        <div class="container header-flex">
+            <div class="header__left">
+                <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
+                        class="pink__letter">D</span></a>
+                <form class="header__form" action="#">
+                    <a href="#" class="browse">Browse <i class="fas fa-caret-down fas-grey"></i></a>
+                    <input class="search_input" type="text" placeholder="Search for Item...">
+                    <button class="search__button" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <mini-cart></mini-cart>
         </div>
-        <div class="header__right">
-            <img class="header__cart" src="img/cart.svg" alt="cart">
-            <a href="cart.html" class="button">My Account <i class="fas fa-caret-down"></i></a>
-        </div>
-    </div>
-</header>
-<nav>
-    <ul class="menu">
-        <li class="menu__list"><a href="index.html" class="menu__link">Home </a>
-            <div class="drop">
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                    </ul>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li class="menu__list"><a href="index.html" class="menu__link">Home </a>
+                <div class="drop">
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li class="menu__list"><a href="product.html" class="menu__link">Man </a>
-            <div class="drop">
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                    </ul>
-                </div>
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li class="menu__list"><a href="product.html" class="menu__link">Women </a>
-            <div class="drop">
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                        <li><a class="drop__link" href="#">Blazers</a></li>
-                        <li><a class="drop__link" href="#">Denim</a></li>
-                        <li><a class="drop__link" href="#">Leggings/Pants</a></li>
-                        <li><a class="drop__link" href="#">Skirts/Shorts</a></li>
-                        <li><a class="drop__link" href="#">Accessories </a></li>
-                    </ul>
-                </div>
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                    </ul>
-                </div>
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li class="menu__list"><a href="product.html" class="menu__link">Kids </a>
-            <div class="drop">
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                    </ul>
-                </div>
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li class="menu__list"><a href="product.html" class="menu__link">Accoseriese </a>
-            <div class="drop">
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                    </ul>
-                </div>
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li class="menu__list"><a href="product.html" class="menu__link">Featured </a>
-            <div class="drop drop__last">
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                    </ul>
-                </div>
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li class="menu__list"><a href="product.html" class="menu__link">Hot Deals </a>
-            <div class="drop drop__last">
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                    </ul>
-                </div>
-                <div class="drop__flex">
-                    <h3 class="drop__h3">Women</h3>
-                    <ul class="drop__menu">
-                        <li><a class="drop__link" href="#">Dresses</a></li>
-                        <li><a class="drop__link" href="#">Tops</a></li>
-                        <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
-                        <li><a class="drop__link" href="#">Jackets/Coats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul>
-</nav>
-<div class="breadcrumb">
-    <div class="container breadcrumb__content">
-        <h2 class="breadcrumb__page-description">New arrivals</h2>
-        <nav>
-            <ul class="breadcrumb__list">
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Home</a></li>
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="product.html">Men</a></li>
-                <li class="breadcrumb__item">New arrivals</li>
-            </ul>
-        </nav>
-    </div>
-</div>
-<div class="image-slide">
-    <div class="image-slide__switch">
-        <p><i class="fas fa-angle-left"></i></p>
-    </div>
-    <img class="image-slide__img" src="img/single.jpg" alt="product photo">
-    <div class="image-slide__switch">
-        <i class="fas fa-angle-right"></i>
-    </div>
-</div>
-<div class="container product-description">
-    <h3 class="product-description__collection">Woman collection</h3>
-    <div class="product-description__devider"></div>
-    <h3 class="product-description__name">Moschino Cheap And Chic</h3>
-    <article class="product-description__text">Compellingly actualize fully researched processes before proactive
-        outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely
-        visualize parallel core competencies rather than exceptional portals.
-    </article>
-    <ul class="product-description__param-list">
-        <li class="product-description__param-item">MATERIAL: <span class="black">COTTON</span></li>
-        <li class="product-description__param-item">DESIGNER: <span class="black">BINBURHAN</span></li>
-    </ul>
-    <p class="product-description__price">$561</p>
-    <div class="product-description__line"></div>
-    <form action="#" class="product-description__form-to-cart">
-        <div class="product-description__selection">
-            <h3 class="product-description__form-h3">CHOOSE COLOR</h3>
-            <select name="choose-color" class="product-description__to-cart-option">
-                <option value="Red" class="option-color">Red</option>
-                <option value="Yellow" class="option-color">Yellow</option>
-                <option value="Green" class="option-color">Green</option>
-            </select>
-        </div>
-        <div class="product-description__selection">
-            <h3 class="product-description__form-h3">CHOOSE SIZE</h3>
-            <select name="choose-size" class="product-description__to-cart-option">
-                <option value="XXS">XXS</option>
-                <option value="XS">XS</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
-            </select>
-        </div>
-        <div class="product-description__selection">
-            <h3 class="product-description__form-h3">QUANTITY</h3>
-            <input type="text" value="1" class="product-description__to-cart-option">
-        </div>
-        <button type="submit" class="product-description__to-cart-btn">
-            <img class="product-description__cart-icon" src="img/pink_cart.svg" alt="cart">
-            <p>Add to cart</p>
-        </button>
-    </form>
-</div>
-<div class="container recomendation">
-    <h3 class="recomendation__h3">You may like also</h3>
-    <div class="product__cards">
-        <div class="item">
-            <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-            <div class="info">
-                <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                <p class="item__price">$52.00</p>
-            </div>
-            <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-        </div>
-        <div class="item">
-            <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-            <div class="info">
-                <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                <p class="item__price">$52.00</p>
-            </div>
-            <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-        </div>
-        <div class="item">
-            <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-            <div class="info">
-                <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                <p class="item__price">$52.00</p>
-            </div>
-            <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-        </div>
-        <div class="item">
-            <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-            <div class="info">
-                <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                <p class="item__price">$52.00</p>
-            </div>
-            <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-        </div>
-    </div>
-</div>
-<div class="another_div">
-    <div class="bg"></div>
-    <div class="left__section">
-        <div class="cite">
-            <blockquote>
-                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-                a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
-            </blockquote>
-            <p class="author___row1">Bin Burhan</p>
-            <p class="author__row2">Dhaka, Bd</p>
-            <div class="stripes">
-                <div class="white__stripe"></div>
-                <div class="pink__stripe"></div>
-                <div class="white__stripe"></div>
-            </div>
-        </div>
-        <div class="author__photo"><img src="img/author.jpg" class="round" alt=""></div>
-    </div>
-    <div class="vertical_line"></div>
-    <div class="right__section">
-        <div class="subscribe__header">
-            <p class="subscribe__row1">Subscribe</p>
-            <p class="subscribe__row2">FOR OUR NEWLETTER AND PROMOTION</p>
-        </div>
-        <form class="subcribe__form" action="#">
-            <input class="subcribe__text" placeholder="Enter Your Email" type="text">
-            <a href="#" class="subscribe__button">Subscribe</a>
-        </form>
-    </div>
-</div>
-<footer class="footer_top">
-    <div class="about-content">
-        <a class="logo" href="#"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
-                class="pink__letter">D</span></a>
-        <p class="about">Objectively transition extensive data rather than cross functional solutions.
-            Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate
-            an expanded array of processes and cross-unit partnerships. </p>
-        <p class="about">Efficiently plagiarize 24/365 action items and focused infomediaries.
-            Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
-    </div>
-    <nav class="sitemap">
-        <ul class="map">
-            <li class="map__groups"> Company
-                <ul class="map__linkgroup">
-                    <li class="map__list"><a class="map__link" href="#">Home</a></li>
-                    <li class="map__list"><a href="#" class="map__link">Shop</a></li>
-                    <li class="map__list"><a href="#" class="map__link">About</a></li>
-                    <li class="map__list"><a href="#" class="map__link">How It Works</a></li>
-                    <li class="map__list"><a href="#" class="map__link">Contact</a></li>
-                </ul>
             </li>
-            <li class="map__groups"> Information
-                <ul class="map__linkgroup">
-                    <li class="map__list"><a href="#" class="map__link">Terms &amp; Condition</a></li>
-                    <li class="map__list"><a href="#" class="map__link">Privacy Policy</a></li>
-                    <li class="map__list"><a href="#" class="map__link">How To Buy</a></li>
-                    <li class="map__list"><a href="#" class="map__link">How To Sell</a></li>
-                    <li class="map__list"><a href="#" class="map__link">Promotion</a></li>
-                </ul>
+            <li class="menu__list"><a href="product.html" class="menu__link active">Man </a>
+                <div class="drop">
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                    </div>
+                </div>
             </li>
-            <li class="map__groups"> Shop category
-                <ul class="map__linkgroup">
-                    <li class="map__list"><a href="product.html" class="map__link">Men</a></li>
-                    <li class="map__list"><a href="product.html" class="map__link">Women</a></li>
-                    <li class="map__list"><a href="product.html" class="map__link">Child</a></li>
-                    <li class="map__list"><a href="product.html" class="map__link">Apparel</a></li>
-                    <li class="map__list"><a href="product.html" class="map__link">Browse All</a></li>
-                </ul>
+            <li class="menu__list"><a href="product.html" class="menu__link">Women </a>
+                <div class="drop">
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                            <li><a class="drop__link" href="#">Blazers</a></li>
+                            <li><a class="drop__link" href="#">Denim</a></li>
+                            <li><a class="drop__link" href="#">Leggings/Pants</a></li>
+                            <li><a class="drop__link" href="#">Skirts/Shorts</a></li>
+                            <li><a class="drop__link" href="#">Accessories </a></li>
+                        </ul>
+                    </div>
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu__list"><a href="product.html" class="menu__link">Kids </a>
+                <div class="drop">
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu__list"><a href="product.html" class="menu__link">Accoseriese </a>
+                <div class="drop">
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu__list"><a href="product.html" class="menu__link">Featured </a>
+                <div class="drop drop__last">
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu__list"><a href="product.html" class="menu__link">Hot Deals </a>
+                <div class="drop drop__last">
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="drop__flex">
+                        <h3 class="drop__h3">Women</h3>
+                        <ul class="drop__menu">
+                            <li><a class="drop__link" href="#">Dresses</a></li>
+                            <li><a class="drop__link" href="#">Tops</a></li>
+                            <li><a class="drop__link" href="#">Sweaters/Knits</a></li>
+                            <li><a class="drop__link" href="#">Jackets/Coats</a></li>
+                        </ul>
+                    </div>
+                </div>
             </li>
         </ul>
     </nav>
-</footer>
-<footer class="footer_bottom">
-    <div class="container footer__bottom_flex">
-        <p class="copyright">&copy; 2017 Brand All Rights Reserved.</p>
-        <div class="socials">
-            <a class="sn" href="#"><i class="fab fa-google-plus-g"></i></a>
-            <a class="sn" href="#"><i class="fab fa-pinterest-p"></i></a>
-            <a class="sn" href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a class="sn" href="#"><i class="fab fa-twitter"></i></a>
-            <a class="sn" href="#"><i class="fab fa-facebook-f"></i></a>
+    <div class="breadcrumb">
+        <div class="container breadcrumb__content">
+            <h2 class="breadcrumb__page-description">New arrivals</h2>
+            <nav>
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="product.html">Men</a></li>
+                    <li class="breadcrumb__item">New arrivals</li>
+                </ul>
+            </nav>
         </div>
     </div>
-</footer>
-
+    <div class="image-slide">
+        <div class="image-slide__switch">
+            <p><i class="fas fa-angle-left"></i></p>
+        </div>
+        <img class="image-slide__img" src="img/single.jpg" alt="product photo">
+        <div class="image-slide__switch">
+            <i class="fas fa-angle-right"></i>
+        </div>
+    </div>
+    <div class="container product-description">
+        <h3 class="product-description__collection">Woman collection</h3>
+        <div class="product-description__devider"></div>
+        <h3 class="product-description__name">Moschino Cheap And Chic</h3>
+        <article class="product-description__text">Compellingly actualize fully researched processes before proactive
+            outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely
+            visualize parallel core competencies rather than exceptional portals.
+        </article>
+        <ul class="product-description__param-list">
+            <li class="product-description__param-item">MATERIAL: <span class="black">COTTON</span></li>
+            <li class="product-description__param-item">DESIGNER: <span class="black">BINBURHAN</span></li>
+        </ul>
+        <p class="product-description__price">$561</p>
+        <div class="product-description__line"></div>
+        <single-product></single-product>
+    </div>
+    <div class="container recomendation">
+        <h3 class="recomendation__h3">You may like also</h3>
+        <products ref="products" :list_size="4"></products>
+    </div>
+    <div class="another_div">
+        <div class="bg"></div>
+        <div class="left__section">
+            <div class="cite">
+                <blockquote>
+                    “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                    a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                </blockquote>
+                <p class="author___row1">Bin Burhan</p>
+                <p class="author__row2">Dhaka, Bd</p>
+                <div class="stripes">
+                    <div class="white__stripe"></div>
+                    <div class="pink__stripe"></div>
+                    <div class="white__stripe"></div>
+                </div>
+            </div>
+            <div class="author__photo"><img src="img/author.jpg" class="round" alt=""></div>
+        </div>
+        <div class="vertical_line"></div>
+        <div class="right__section">
+            <div class="subscribe__header">
+                <p class="subscribe__row1">Subscribe</p>
+                <p class="subscribe__row2">FOR OUR NEWLETTER AND PROMOTION</p>
+            </div>
+            <form class="subcribe__form" action="#">
+                <input class="subcribe__text" placeholder="Enter Your Email" type="text">
+                <a href="#" class="subscribe__button">Subscribe</a>
+            </form>
+        </div>
+    </div>
+    <footer class="footer_top">
+        <div class="about-content">
+            <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
+                    class="pink__letter">D</span></a>
+            <p class="about">Objectively transition extensive data rather than cross functional solutions.
+                Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate
+                an expanded array of processes and cross-unit partnerships. </p>
+            <p class="about">Efficiently plagiarize 24/365 action items and focused infomediaries.
+                Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+        </div>
+        <nav class="sitemap">
+            <ul class="map">
+                <li class="map__groups"> Company
+                    <ul class="map__linkgroup">
+                        <li class="map__list"><a class="map__link" href="#">Home</a></li>
+                        <li class="map__list"><a href="#" class="map__link">Shop</a></li>
+                        <li class="map__list"><a href="#" class="map__link">About</a></li>
+                        <li class="map__list"><a href="#" class="map__link">How It Works</a></li>
+                        <li class="map__list"><a href="#" class="map__link">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="map__groups"> Information
+                    <ul class="map__linkgroup">
+                        <li class="map__list"><a href="#" class="map__link">Terms &amp; Condition</a></li>
+                        <li class="map__list"><a href="#" class="map__link">Privacy Policy</a></li>
+                        <li class="map__list"><a href="#" class="map__link">How To Buy</a></li>
+                        <li class="map__list"><a href="#" class="map__link">How To Sell</a></li>
+                        <li class="map__list"><a href="#" class="map__link">Promotion</a></li>
+                    </ul>
+                </li>
+                <li class="map__groups"> Shop category
+                    <ul class="map__linkgroup">
+                        <li class="map__list"><a href="product.html" class="map__link">Men</a></li>
+                        <li class="map__list"><a href="product.html" class="map__link">Women</a></li>
+                        <li class="map__list"><a href="product.html" class="map__link">Child</a></li>
+                        <li class="map__list"><a href="product.html" class="map__link">Apparel</a></li>
+                        <li class="map__list"><a href="product.html" class="map__link">Browse All</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <footer class="footer_bottom">
+        <div class="container footer__bottom_flex">
+            <p class="copyright">&copy; 2017 Brand All Rights Reserved.</p>
+            <div class="socials">
+                <a class="sn" href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a class="sn" href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a class="sn" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="sn" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="sn" href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="js/vue.js"></script>
+<script src="js/productsComponent.js"></script>
+<script src="js/cartComponent.js"></script>
+<script src="js/singleProductComponent.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
