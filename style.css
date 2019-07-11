@@ -107,7 +107,7 @@ a {
 }
 
 .header__right:hover .mini-cart {
-  display: flex;
+  display: block;
 }
 
 .button {
@@ -1349,9 +1349,8 @@ select.display__prop__item {
 }
 
 .mini-cart {
-  flex-direction: column;
-  align-items: center;
   display: none;
+  align-content: center;
   z-index: 1;
   position: absolute;
   box-sizing: border-box;
@@ -1362,6 +1361,10 @@ select.display__prop__item {
   border: 1px solid #ececec;
   border-radius: 5px;
   background-color: #ffffff;
+}
+
+.mini-cart p {
+  text-align: center;
 }
 
 .mini-cart__item {

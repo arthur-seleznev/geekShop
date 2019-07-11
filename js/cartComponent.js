@@ -144,7 +144,7 @@ Vue.component('mini-cart', {
                     <div class="cart-num-icon">{{$root.$refs.cartData.cartItems.length}}</div>
                     <a href="cart.html" class="button">My Account <i class="fas fa-caret-down"></i></a>
                </div>
-               <div class="mini-cart" v-if="!$root.$refs.cartData.cartItems.length">Корзина пуста</div>
+               <div class="mini-cart empty" v-if="!$root.$refs.cartData.cartItems.length"><p>Корзина пуста</p></div>
                <div v-else class="mini-cart">
                     <mini-cart-item
                     v-for="item of $root.$refs.cartData.cartItems"
