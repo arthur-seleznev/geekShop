@@ -7,10 +7,12 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="sstyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<div id="app">
+    <cart-data ref="cartData"></cart-data>
     <header class="header">
         <div class="container header-flex">
             <div class="header__left">
@@ -22,10 +24,7 @@
                     <button class="search__button" type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-            <div class="header__right">
-                <img class="header__cart" src="img/cart.svg" alt="cart">
-                <a href="cart.html" class="button">My Account <i class="fas fa-caret-down"></i></a>
-            </div>
+            <mini-cart></mini-cart>
         </div>
     </header>
     <nav>
@@ -58,7 +57,7 @@
                     </div>
                 </div>
             </li>
-            <li class="menu__list"><a href="product.html" class="menu__link">Man </a>
+            <li class="menu__list"><a href="product.html" class="menu__link active">Man </a>
                 <div class="drop">
                     <div class="drop__flex">
                         <h3 class="drop__h3">Women</h3>
@@ -366,80 +365,7 @@
                         </select>
                 </div>
             </div>
-            <div class="product__cards">
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-                <div class="item">
-                    <div class="photo"><a href="single-page.html"><img src="img/1.jpg" alt=""></a></div>
-                    <div class="info">
-                        <a class="item__name" href="single-page.html">Mango People T-shirt</a>
-                        <p class="item__price">$52.00</p>
-                    </div>
-                    <a href="#" class="product__add"><img src="img/white_cart.svg" alt="cart">Add to Cart</a>
-                </div>
-            </div>
+            <products ref="products" :list_size="9"></products>
             <div class="product__nav">
                 <ul class="product__pages">
                     <li><a class="pages__link" href="#">&lt;</a></li>
@@ -509,7 +435,7 @@
     </div>
     <footer class="footer_top">
         <div class="about-content">
-            <a class="logo" href="#"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
+            <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
                     class="pink__letter">D</span></a>
             <p class="about">Objectively transition extensive data rather than cross functional solutions.
                 Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate
@@ -561,7 +487,11 @@
             </div>
         </div>
     </footer>
-
+</div>
+<script src="js/vue.js"></script>
+<script src="js/productsComponent.js"></script>
+<script src="js/cartComponent.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
